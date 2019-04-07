@@ -1,0 +1,68 @@
+html {
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  display: grid;
+}
+
+.slideShow {
+  position: relative;
+  display: block;
+  width: 90vw;
+  height: 90vh;
+  text-decoration: none;
+  color: #101010;
+  font-family: sans-serif;
+  display: grid;
+  place-items: center;
+  padding: 5vh 5vw;
+  overflow: hidden;
+}
+
+img {
+  background: #000;
+  object-fit: cover;
+  width: 400px;
+  height: 300x;
+}
+
+*[show] {
+/*   display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  position: relative; */
+}
+
+*[show] img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 50%;
+  height: 50%;
+  margin: auto;
+  display: block;
+  background: #000;
+}
+
+*[show=hide] img {
+  background: #000;
+}
+
+*[show=show] img {
+  background: #f00;
+  transform: scale(0);
+  animation: grow 0.25s forwards;
+}
+
+@keyframes grow {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
