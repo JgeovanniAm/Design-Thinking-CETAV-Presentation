@@ -1,3 +1,13 @@
+@font-face {
+  font-family: 'BebasNeue';
+  src: url('../fonts/BebasNeue-Regular.woff') format('woff');
+}
+
+* {
+  font-family: 'BebasNeue';
+  letter-spacing: 1px;
+}
+
 html {
   overflow: hidden;
   scroll-behavior: smooth;
@@ -6,10 +16,21 @@ html {
 body {
   margin: 0;
   display: grid;
+  background: #000;
+}
+
+.show {
+  width: 100%;
+  height: 100%;
+  background-attachment: fixed;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url('../gif/REDS.gif');
 }
 
 .slideShow {
-  background: #101010;
+  background: #000;
   color: #fff;
   position: relative;
   display: block;
@@ -21,6 +42,8 @@ body {
   place-items: center;
   padding: 5vh 5vw;
   overflow: hidden;
+  -webkit-clip-path: inset(5% 5% 5% 5%);
+  clip-path: inset(5% 5% 5% 5%);
 }
 
 h1 {
@@ -43,8 +66,27 @@ img {
   height: 300x;
 }
 
+[show]:nth-child(3) {
+  background-image: url('../gif/ods.gif');
+  background-attachment: fixed;
+  background-position: center;
+  background-size: contain;
+}
 
-*[show]:nth-child(2) img {
+[show]:nth-child(4) {
+  background-image: url('../gif/bgMoving.gif');
+  background-attachment: fixed;
+  background-position: center;
+  background-size: contain;
+}
+
+[show]:nth-child(4) h2 {
+  z-index: 2;
+  color: #f00;
+  font-size: 100px !important;
+}
+
+[show]:nth-child(4) img {
   position: absolute;
   top: 0;
   left: 0;
@@ -57,11 +99,11 @@ img {
   background: #000;
 }
 
-*[show=hide]:nth-child(2) img {
+[show=hide]:nth-child(4) img {
   background: #000;
 }
 
-*[show=show]:nth-child(2) img {
+[show=show]:nth-child(4) img {
   background: #f00;
   transform: scale(0);
   animation: grow 0.25s forwards;
@@ -78,7 +120,7 @@ img {
 }
 
 
-*[show=show]:nth-child(2) h2 {
+[show=show]:nth-child(3) h2 {
   line-height: 2;
   font-size: 80px;
   display: block;
@@ -109,4 +151,73 @@ img {
 .grid4 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+}
+
+.members-wrapper h2 {
+  color: #f00;
+  text-align: center;
+  font-size: 50px;
+  transform: scale(2);
+  -webkit-transform: scale(2);
+  -moz-transform: scale(2);
+  -ms-transform: scale(2);
+  -o-transform: scale(2);
+}
+
+.members {
+  display: grid;
+  grid-gap: 25px;
+  grid-template-columns: repeat(4, 1fr);
+  place-items: center;
+}
+
+.team-wrapper {
+  display: grid;
+  place-items: center;
+}
+
+.team {
+  --size: 200px;
+  width: var(--size);
+  height: var(--size);
+  background: #000;
+  border-radius: 50%;
+  border: 10px solid #f00;
+}
+
+.team-wrapper p, .team-wrapper h3 {
+  color: #fff;
+}
+
+[data-name] {
+  background-position: top;
+  background-size: 300px;
+  background-repeat: no-repeat;
+  filter: grayscale(1);
+  -webkit-filter: grayscale(1);
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+[data-name="Mariana"] {
+  background-size: 200px;
+  background-image: url('../img/team/Mariana.jpg');
+}
+
+[data-name="Jimmy"] {
+  background-image: url('../img/team/Jimmy.jpg');
+}
+
+[data-name="Luis"] {
+  background-image: url('../img/team/Luis.jpg');
+}
+
+[data-name="Elmer"] {
+  background-size: 200px;
+  background-image: url('../img/team/Elmer.jpg');
 }

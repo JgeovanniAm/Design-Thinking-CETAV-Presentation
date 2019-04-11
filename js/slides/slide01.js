@@ -3,7 +3,7 @@
   quicker().fetchJSON('data/slide01.json', setSlide01);
   function setSlide01(data) {
     imagePathsArray = data;
-    let slideShow = document.getElementsByClassName('slideShow')[1];
+    let slideShow = document.getElementsByClassName('slideShow')[3];
     let max = 2024;
     for(let i = 0; i < imagePathsArray.length; i++) {
       let img = document.createElement('img');
@@ -14,7 +14,6 @@
         img.style.top = `${quicker().makeFloatingRandom(0, max) - max / 2}px`; 
       }
       slideShow.appendChild(img);
-      // slideShow.insertBefore(img, slideShow.childNodes[0]);
     }
   }
 }());
