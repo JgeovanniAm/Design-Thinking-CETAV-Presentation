@@ -1,0 +1,20 @@
+.s11 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    div {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: contain;
+        width: 100%;
+        height: 100%;
+    }
+    div:nth-child(1) {
+        background-position: -100px center;
+        background-size: 150vh;
+        background-image: url('../gif/pedestrianWalking.gif');
+    }
+    div:nth-child(2) {
+        background-image: url('../gif/checking.gif');
+    }
+}
