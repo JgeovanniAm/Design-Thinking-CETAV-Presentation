@@ -1,0 +1,135 @@
+#mapa_De_Audiencia {
+    max-height: 640px;
+  }
+  #mapa-de-audiencia {
+    width: 100vh;
+    height: 100vh;
+    position: relative;
+    transform: scale(0.75) translateY(-220px);
+    font-family: sans-serif;
+  }
+  #mapa-de-audiencia::after,
+  #mapa-de-audiencia::before,
+  .vetientes:first-child::before,
+  .vetientes:first-child::after {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    line-height: 3;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: #eee;
+    color: white;
+    font-weight: bold;
+  }
+  #mapa-de-audiencia::after{
+    content: "+Poder";
+    text-indent: 15px;
+    width: 5px;
+    height: 600px;
+  }
+  #mapa-de-audiencia::before {
+    content: "+ Interés";
+    text-align: right;
+    width: 600px;
+    height: 5px;
+  }
+  .vetientes:first-child {
+    position: relative;
+  }
+  .vetientes:first-child::after,
+  .vetientes:first-child::before {
+    content: '';
+    text-align: right;
+    width: 100%;
+    z-index: -1;
+    height: 5px;
+  }
+  .vetientes:first-child::after {
+    transform: rotate(45deg);
+  }
+  .vetientes:first-child::before {
+    transform: rotate(-45deg);
+  }
+  .vetientes:first-child h5 {
+    transition: 0.25s;
+    padding: 10px;
+    width: 80px;
+    text-align: center;
+  }
+  .vetientes:first-child h5:hover {
+    background: white;
+    color: #f0f0f0;
+  }
+  .vetientes:first-child .piensaSiente h5,
+  .vetientes:first-child .diceHace h5 {
+    transform: translate(110px);
+  }
+  .vetientes:first-child .ve h5 {
+    transform: translateX(185px) translateY(35px);
+  }
+  .vetientes:first-child .oye h5 {
+    transform: translateX(35px) translateY(-35px);
+  }
+  .points {
+    padding: 5px;
+    text-transform: uppercase;
+    color: red;
+    letter-spacing: 5px;
+    z-index: 1;
+    line-height: 5;
+    text-align: right;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: red; /*test*/
+    border-radius: 50%;
+    transition: 0.25s;
+  }
+  .points:hover {
+    color: #f00;
+    background: #f00;
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+  .mama {
+    top: calc(320px - 140px);
+    left: 560px;
+  }
+  .asalariados {
+    top: calc(300px - 50px);
+    left: 120px;
+  }
+  .colegial {
+    top: calc(600px - 50px);
+    left: 20px;
+  }
+  .funcionarios {
+    top: calc(100px - 50px);
+    left: 500px;
+  }
+  .universitariosLow {
+    top: calc(500px - 50px);
+    left: 100px;
+  }
+  .universitariosMid {
+    top: calc(460px - 90px);
+    left: 310px;
+  }
+  .universitariosHigh {
+    top: calc(500px - 50px);
+    left: 500px;
+  }
+  .comerciantes {
+    top: calc(170px - 50px);
+    left: 400px;
+  }
+  #mapa_De_Audiencia [data-name]{
+    filter: grayscale(0);
+    -webkit-filter: grayscale(0);
+  }
