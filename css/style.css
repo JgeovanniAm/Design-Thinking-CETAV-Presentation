@@ -186,4 +186,13 @@ img {
   animation: grow 0.25s forwards;
   -webkit-animation: grow 0.25s forwards; }
 
+.s14 {
+  background-image: url("../gif/bgMoving.gif");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: contain; }
+  .s14 h1 {
+    color: red;
+    letter-spacing: 2px; }
+
 /*# sourceMappingURL=style.css.map */
