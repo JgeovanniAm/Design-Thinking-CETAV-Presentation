@@ -1,0 +1,36 @@
+[show]:nth-child(4) {
+  background-image: url("../gif/bgMoving.gif");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: contain;
+}
+
+[show]:nth-child(4) h2 {
+  z-index: 2;
+  color: #f00;
+  font-size: 100px !important;
+}
+
+[show]:nth-child(4) img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 50%;
+  height: 50%;
+  margin: auto;
+  display: block;
+  background: #000;
+}
+
+[show="hide"]:nth-child(4) img {
+  background: #000;
+}
+
+[show="show"]:nth-child(4) img {
+  background: #f00;
+  transform: scale(0);
+  animation: grow 0.25s forwards;
+  -webkit-animation: grow 0.25s forwards;
+}

@@ -1,0 +1,14 @@
+[show]:nth-child(3) {
+  background-image: url("../gif/ods.gif");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: contain;
+}
+
+[show=show]:nth-child(3) h2 {
+  line-height: 2;
+  font-size: 80px;
+  display: block;
+  text-transform: uppercase;
+  z-index: 1;
+}

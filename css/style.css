@@ -1,10 +1,22 @@
-@font-face {
-  font-family: 'BebasNeue';
-  src: url('../fonts/BebasNeue-Regular.woff') format('woff');
+@keyframes grow {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
 }
-
+@keyframes redGlow {
+  50% {
+    text-shadow: 0 0 20vw #f00, 0 0 5vw #f00, 0 0 3vw #f00;
+  }
+}
+@font-face {
+  font-family: "BebasNeue";
+  src: url("../fonts/BebasNeue-Regular.woff") format("woff");
+}
 * {
-  font-family: 'BebasNeue';
+  font-family: "BebasNeue";
   letter-spacing: 1px;
 }
 
@@ -26,7 +38,7 @@ body {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url('../gif/REDS.gif');
+  background-image: url("../gif/REDS.gif");
 }
 
 .slideShow {
@@ -64,74 +76,6 @@ img {
   object-fit: cover;
   width: 400px;
   height: 300x;
-}
-
-[show]:nth-child(3) {
-  background-image: url('../gif/ods.gif');
-  background-attachment: fixed;
-  background-position: center;
-  background-size: contain;
-}
-
-[show]:nth-child(4) {
-  background-image: url('../gif/bgMoving.gif');
-  background-attachment: fixed;
-  background-position: center;
-  background-size: contain;
-}
-
-[show]:nth-child(4) h2 {
-  z-index: 2;
-  color: #f00;
-  font-size: 100px !important;
-}
-
-[show]:nth-child(4) img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 50%;
-  height: 50%;
-  margin: auto;
-  display: block;
-  background: #000;
-}
-
-[show=hide]:nth-child(4) img {
-  background: #000;
-}
-
-[show=show]:nth-child(4) img {
-  background: #f00;
-  transform: scale(0);
-  animation: grow 0.25s forwards;
-  -webkit-animation: grow 0.25s forwards;
-}
-
-@keyframes grow {
-  from {
-    transform: scale(0);
-  }
-  to {
-    transform: scale(1);
-  }
-}
-
-
-[show=show]:nth-child(3) h2 {
-  line-height: 2;
-  font-size: 80px;
-  display: block;
-  text-transform: uppercase;
-  z-index: 1;
-}
-
-@keyframes redGlow {
-  50% {
-    text-shadow: 0 0 20vw #f00, 0 0 5vw #f00, 0 0 3vw #f00;
-  }
 }
 
 .grid {
@@ -185,7 +129,8 @@ img {
   border: 10px solid #f00;
 }
 
-.team-wrapper p, .team-wrapper h3 {
+.team-wrapper p,
+.team-wrapper h3 {
   color: #fff;
 }
 
@@ -204,20 +149,74 @@ img {
   -o-border-radius: 50%;
 }
 
-[data-name="Mariana"] {
+[data-name=Mariana] {
   background-size: 200px;
-  background-image: url('../img/team/Mariana.jpg');
+  background-image: url("../img/team/Mariana.jpg");
 }
 
-[data-name="Jimmy"] {
-  background-image: url('../img/team/Jimmy.jpg');
+[data-name=Jimmy] {
+  background-image: url("../img/team/Jimmy.jpg");
 }
 
-[data-name="Luis"] {
-  background-image: url('../img/team/Luis.jpg');
+[data-name=Luis] {
+  background-image: url("../img/team/Luis.jpg");
 }
 
-[data-name="Elmer"] {
+[data-name=Elmer] {
   background-size: 200px;
-  background-image: url('../img/team/Elmer.jpg');
+  background-image: url("../img/team/Elmer.jpg");
 }
+
+[show]:nth-child(3) {
+  background-image: url("../gif/ods.gif");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: contain;
+}
+
+[show=show]:nth-child(3) h2 {
+  line-height: 2;
+  font-size: 80px;
+  display: block;
+  text-transform: uppercase;
+  z-index: 1;
+}
+
+[show]:nth-child(4) {
+  background-image: url("../gif/bgMoving.gif");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: contain;
+}
+
+[show]:nth-child(4) h2 {
+  z-index: 2;
+  color: #f00;
+  font-size: 100px !important;
+}
+
+[show]:nth-child(4) img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 50%;
+  height: 50%;
+  margin: auto;
+  display: block;
+  background: #000;
+}
+
+[show=hide]:nth-child(4) img {
+  background: #000;
+}
+
+[show=show]:nth-child(4) img {
+  background: #f00;
+  transform: scale(0);
+  animation: grow 0.25s forwards;
+  -webkit-animation: grow 0.25s forwards;
+}
+
+/*# sourceMappingURL=style.css.map */

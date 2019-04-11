@@ -1,0 +1,69 @@
+.members-wrapper h2 {
+  color: #f00;
+  text-align: center;
+  font-size: 50px;
+  transform: scale(2);
+  -webkit-transform: scale(2);
+  -moz-transform: scale(2);
+  -ms-transform: scale(2);
+  -o-transform: scale(2);
+}
+
+.members {
+  display: grid;
+  grid-gap: 25px;
+  grid-template-columns: repeat(4, 1fr);
+  place-items: center;
+}
+
+.team-wrapper {
+  display: grid;
+  place-items: center;
+}
+
+.team {
+  --size: 200px;
+  width: var(--size);
+  height: var(--size);
+  background: #000;
+  border-radius: 50%;
+  border: 10px solid #f00;
+}
+
+.team-wrapper p,
+.team-wrapper h3 {
+  color: #fff;
+}
+
+[data-name] {
+  background-position: top;
+  background-size: 300px;
+  background-repeat: no-repeat;
+  filter: grayscale(1);
+  -webkit-filter: grayscale(1);
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+[data-name="Mariana"] {
+  background-size: 200px;
+  background-image: url("../img/team/Mariana.jpg");
+}
+
+[data-name="Jimmy"] {
+  background-image: url("../img/team/Jimmy.jpg");
+}
+
+[data-name="Luis"] {
+  background-image: url("../img/team/Luis.jpg");
+}
+
+[data-name="Elmer"] {
+  background-size: 200px;
+  background-image: url("../img/team/Elmer.jpg");
+}

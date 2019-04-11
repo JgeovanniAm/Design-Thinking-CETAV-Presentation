@@ -1,0 +1,14 @@
+@keyframes grow {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes redGlow {
+  50% {
+    text-shadow: 0 0 20vw #f00, 0 0 5vw #f00, 0 0 3vw #f00;
+  }
+}
