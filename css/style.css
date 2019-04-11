@@ -11,6 +11,24 @@
     text-shadow: 0 0 20vw #f00, 0 0 5vw #f00, 0 0 3vw #f00;
   }
 }
+@keyframes easeCome {
+  0% {
+    transform: scale(0);
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    opacity: 1;
+  }
+}
 @font-face {
   font-family: "BebasNeue";
   src: url("../fonts/BebasNeue-Regular.woff") format("woff");
@@ -219,10 +237,160 @@ img {
   -webkit-animation: grow 0.25s forwards;
 }
 
-[show=show]:nth-child(5) #findings {
+[show=show].s5 #findings {
+  padding: 0;
+  margin: 0;
+  grid-gap: 15px;
+  color: #f000;
+  list-style: none;
+}
+
+[show=show].s5 #findings li {
+  -webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+  clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 25px;
+  place-items: center;
+  padding: 50px;
+  animation: easeCome 0.5s forwards;
+  -webkit-animation: easeCome 0.5s forwards;
+  opacity: 0;
+  transform: scale(0);
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+}
+
+[show=show].s5 #findings li:nth-child(1) {
+  background-image: url("http://1.bp.blogspot.com/-02rwdWb7RgI/ToZ_giZ2QPI/AAAAAAAAAAg/ZpXU-3CRZvc/s1600/800px-PollutionD%25C3%25AAule2010_04_22_1.jpg");
+  animation-delay: 0s;
+}
+
+[show=show].s5 #findings li:nth-child(2) {
+  background-image: url("https://www.ngenespanol.com/wp-content/uploads/2018/10/isla-basura-pacifico.png");
+  animation-delay: 3s;
+}
+
+[show=show].s5 #findings li:nth-child(3) {
+  background-image: url("http://noticias.canal22.org.mx/wp-content/uploads/2018/08/oceanos.jpg");
+  animation-delay: 6s;
+}
+
+#interviews {
+  width: 100vh;
+  height: 100vh;
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+#interviews::before, #interviews::after,
+#interviews p {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+#interviews [character] {
+  color: #f00;
+  font-size: 24px;
+  text-decoration: underline;
+}
+#interviews p {
+  width: 200px;
+  height: 100px;
+  text-align: center;
+  color: #fff;
+}
+#interviews:before, #interviews:after {
+  content: "";
+  width: 100%;
+  height: 5px;
+  background: #fff;
+}
+#interviews:before {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+}
+#interviews:after {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+}
+#interviews p:nth-child(1) {
+  top: -420px;
+}
+#interviews p:nth-child(2) {
+  top: 50px;
+  left: -400px;
+}
+#interviews p:nth-child(3) {
+  top: 50px;
+  left: 380px;
+}
+#interviews p:nth-child(4) {
+  top: 600px;
+}
+#interviews p:nth-child(5) {
+  top: -400px;
+  animation-delay: 2s !important;
+}
+#interviews p:nth-child(6) {
+  top: 500px;
+  animation-delay: 2.5s !important;
+}
+#interviews p:nth-child(7) {
+  top: 500px;
+  animation-delay: 3s !important;
+}
+#interviews p:nth-child(8) {
+  top: -500px;
+  animation-delay: 3.5s !important;
+}
+#interviews p:nth-child(9) {
+  top: -100px;
+  animation-delay: 4s !important;
+}
+#interviews p:nth-child(10) {
+  top: 200px;
+  animation-delay: 4.5s !important;
+}
+#interviews p:nth-child(11) {
+  animation-delay: 5s !important;
+}
+#interviews p:nth-child(12) {
+  animation-delay: 5.5s !important;
+}
+#interviews p:nth-child(13) {
+  animation-delay: 6s !important;
+}
+#interviews .ve {
+  left: -800px;
+}
+#interviews .oye {
+  left: 650px;
+}
+#interviews .piensa {
+  top: -250px;
+}
+#interviews .hace {
+  top: 300px;
+}
+
+[show=show] #interviews [class] {
+  opacity: 0;
+  animation: easeCome 1s forwards;
+  -webkit-animation: easeCome 1s forwards;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,2 +1,58 @@
-[show="show"].s5 #findings{
+[show="show"].s5 #findings {
+  padding: 0;
+  margin: 0;
+  grid-gap: 15px;
+  color: #f000;
+  list-style: none;
+}
+
+[show="show"].s5 #findings li {
+  -webkit-clip-path: polygon(
+    30% 0%,
+    70% 0%,
+    100% 30%,
+    100% 70%,
+    70% 100%,
+    30% 100%,
+    0% 70%,
+    0% 30%
+  );
+  clip-path: polygon(
+    30% 0%,
+    70% 0%,
+    100% 30%,
+    100% 70%,
+    70% 100%,
+    30% 100%,
+    0% 70%,
+    0% 30%
+  );
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+  display: grid;
+  place-items: center;
+  padding: 50px;
+  animation: easeCome 0.5s forwards;
+  -webkit-animation: easeCome 0.5s forwards;
+  opacity: 0;
+  transform: scale(0);
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+}
+
+[show="show"].s5 #findings li:nth-child(1) {
+  background-image: url("http://1.bp.blogspot.com/-02rwdWb7RgI/ToZ_giZ2QPI/AAAAAAAAAAg/ZpXU-3CRZvc/s1600/800px-PollutionD%25C3%25AAule2010_04_22_1.jpg");
+  animation-delay: 0s;
+}
+[show="show"].s5 #findings li:nth-child(2) {
+  background-image: url("https://www.ngenespanol.com/wp-content/uploads/2018/10/isla-basura-pacifico.png");
+  animation-delay: 3s;
+}
+[show="show"].s5 #findings li:nth-child(3) {
+  background-image: url("http://noticias.canal22.org.mx/wp-content/uploads/2018/08/oceanos.jpg");
+  animation-delay: 6s;
 }
