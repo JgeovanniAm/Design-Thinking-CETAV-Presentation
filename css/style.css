@@ -186,12 +186,38 @@ img {
   animation: grow 0.25s forwards;
   -webkit-animation: grow 0.25s forwards; }
 
-.s14 {
+#persona_Map {
+  max-width: 80%;
+  margin: auto; }
+
+h4 {
+  font-size: 2.5rem;
+  letter-spacing: 2px; }
+
+#persona_Map > div {
+  padding-right: 10%;
+  display: grid;
+  grid-gap: 50px;
+  grid-template-columns: repeat(2, 1fr); }
+
+#persona_Map i {
+  width: 100%;
+  display: block;
+  height: 100%;
+  margin: 10px 15px 10px 15px;
+  background-size: 550px;
+  background-position: left center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-image: url("https://i.pinimg.com/564x/5b/77/f2/5b77f2de29eb683030b4136d3078a84c.jpg");
+  box-shadow: inset 0 -100px 100px -100px #000; }
+
+.s11 {
   background-image: url("../gif/bgMoving.gif");
   background-attachment: fixed;
   background-position: center;
   background-size: contain; }
-  .s14 h1 {
+  .s11 h1 {
     color: red;
     letter-spacing: 2px; }
 
