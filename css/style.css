@@ -219,4 +219,10 @@ img {
   -webkit-animation: grow 0.25s forwards;
 }
 
+[show=show]:nth-child(5) #findings {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 25px;
+}
+
 /*# sourceMappingURL=style.css.map */
