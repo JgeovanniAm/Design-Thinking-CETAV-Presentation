@@ -621,4 +621,48 @@ h4 {
   background-image: url("../gif/checking.gif");
 }
 
+.s12 {
+  background-image: url("../gif/bgMoving.gif");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: contain;
+}
+.s12 h2 {
+  color: #f00;
+}
+.s12 video {
+  z-index: 3;
+  height: 300px;
+}
+
+.s13 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.s13 div {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+}
+.s13 div:nth-child(1) {
+  background-position: -100px center;
+  background-size: 120vh;
+  background-image: url("../img/container(2).jpg");
+}
+.s13 div:nth-child(2) {
+  background-position: 750px center;
+  background-size: 450px;
+  background-image: url("../img/container(1).jpg");
+}
+
+.s14 {
+  background-image: url("../gif/pedestrianRecycling.gif");
+  background-attachment: fixed;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
 /*# sourceMappingURL=style.css.map */

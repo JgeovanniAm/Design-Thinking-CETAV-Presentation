@@ -1,0 +1,13 @@
+.s12 {
+  background-image: url("../gif/bgMoving.gif");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: contain;
+  h2 {
+      color: #f00;
+  }
+  video {
+      z-index: 3;
+      height: 300px;
+  }
+}
